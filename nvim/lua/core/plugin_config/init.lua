@@ -6,4 +6,6 @@ require("core.plugin_config.telescope")
 require("core.plugin_config.completions")
 require("core.plugin_config.lsp_config")
 require("core.plugin_config.presence_config")
-
+require("core.plugin_config.bufferlines")
+require("core.plugin_config.alpha_config")
+require("core.plugin_config.toggleterm")

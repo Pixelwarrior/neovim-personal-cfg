@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "jedi_language_server" },
+    ensure_installed = { "lua_ls", "rust_analyzer", "jedi_language_server", "gopls" },
 }
 local on_attach = function(_, _)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
@@ -25,4 +25,7 @@ require("lspconfig").jedi_language_server.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-
+require("lspconfig").gopls.setup { 
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
